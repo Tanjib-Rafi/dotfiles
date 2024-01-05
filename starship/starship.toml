@@ -1,0 +1,44 @@
+format = """\
+[🐼 Rafi](bg:#030B16 fg:#FF00FF)\
+$time\
+$directory
+$character
+"""
+
+right_format = """\
+[🚀 Custom Text](bg:#030B16 fg:#FF00FF)
+"""
+
+[directory]
+format = "[📂 $path ]($style)"
+style = "fg:#FFFFFF bg:#8A2BE2"
+
+
+
+[git_branch]
+format = '[ 🌿 $branch(:$remote_branch) ]($style)'
+style = "fg:#00FFFF bg:#FFFF00"
+
+[git_status]
+format = '[ $all_status ]($style)'
+style = "fg:#00FFFF bg:#FFFF00"
+
+[git_metrics]
+format = '[ +$added ]($added_style)[]($added_style)'
+added_style = "fg:#00FFFF bg:#FFFF00"
+deleted_style = "fg:bright-red bg:235"
+disabled = false
+
+[cmd_duration]
+format = '[ ⏱ $duration ]($style)'
+style = "fg:bright-white bg:18"
+
+[character]
+success_symbol = '[ ➜](bold green) '
+error_symbol = '[ ✗](#E84D44) '
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[ 🕒 $time ]($style)'
