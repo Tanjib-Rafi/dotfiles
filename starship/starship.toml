@@ -1,4 +1,5 @@
 format = """\
+$python\
 [🐼 Rafi](bg:#030B16 fg:#FF00FF)\
 $time\
 $directory
@@ -42,3 +43,8 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[ 🕒 $time ]($style)'
+
+[python]
+format = "[$symbol $version $virtualenv]($style)"
+style = "fg:#FFD700"
+symbol = "🐍"
