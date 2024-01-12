@@ -1,0 +1,73 @@
+configuration {
+  display-drun: "🔍";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #2d002d;
+  bg-selected: #4d004d;
+  fg: #00ffcc;
+  
+  border: 1;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  height: 40%;
+  background-color: @bg;
+  border: 2;
+  border-color: @bg-selected;
+  border-radius: 5;
+}
+
+element {
+  padding: 10 14;
+  background-color: transparent;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-selected;
+}
+
+entry {
+  background-color: @bg;
+  text-color: @fg;
+  border: 2;
+  border-color: @bg-selected;
+  border-radius: 5;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 10;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 7 7 0 14;
+  background-color: @bg-selected;
+  text-color: @fg;
+  border: 2;
+  border-color: @bg;
+  border-radius: 5;
+}
