@@ -10,6 +10,8 @@ format = '[(${symbol}\($virtualenv\))]($style)'
 
 
 [directory]
+truncation_length = 100 #directories depth
+truncate_to_repo = false
 format = "[📂 $path ]($style)"
 style = "fg:#FFFFFF bg:#8A2BE2"
 
